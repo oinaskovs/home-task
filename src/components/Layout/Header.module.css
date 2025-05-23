@@ -1,0 +1,92 @@
+.mainHeader {
+  top: 45px;
+}
+
+.headerContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.viewToggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 6px;
+  gap: 16px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.viewToggleButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  gap: 16px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.viewToggleButton:hover:not(.active) {
+  background-color: #d9d9d9;
+}
+
+.viewToggleButton svg {
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.viewToggleButton span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.active {
+  background: #0070ff;
+}
+
+.active svg {
+  color: #ffffff;
+}
+
+.active span {
+  color: #ffffff;
+}
+
+.active:hover {
+  background: #0070ff;
+}
+
+.viewToggleButton:not(.active) svg {
+  color: #1c1b1f;
+}
+
+.viewToggleButton:not(.active) span {
+  color: #1c1b1f;
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 0 1rem;
+  }
+
+  .viewToggleButton span {
+    font-size: 16px;
+  }
+}

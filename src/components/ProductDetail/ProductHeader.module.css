@@ -1,0 +1,145 @@
+.productHeader {
+  margin-bottom: 2rem;
+}
+
+.productHeaderMain {
+  display: flex;
+  gap: 2rem;
+}
+
+.productHeaderLeft {
+  flex: 0 0 40%;
+}
+
+.productHeaderRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.productImage {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productImage img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.placeholderImage {
+  background-color: #f0f0f0;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.placeholderImage span {
+  font-size: 5rem;
+  color: #999;
+}
+
+.productName {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.productCategory {
+  color: #666;
+  font-size: 1rem;
+}
+
+.productRating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stars {
+  display: flex;
+}
+
+.star {
+  font-size: 1.2rem;
+}
+
+.starFilled {
+  color: #f8b400;
+}
+
+.starEmpty {
+  color: #ddd;
+}
+
+.ratingValue {
+  font-weight: bold;
+  color: #333;
+}
+
+.reviewsCount {
+  color: #666;
+}
+
+.productPrice {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.productActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.addToCartButton {
+  padding: 0.8rem 1.5rem;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addToCartButton:hover:not(:disabled) {
+  background-color: #1557b0;
+}
+
+.addToCartButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.wishlistButton {
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.wishlistButton:hover {
+  background-color: #f0f7ff;
+}
+
+@media (max-width: 768px) {
+  .productHeaderMain {
+    flex-direction: column;
+  }
+}

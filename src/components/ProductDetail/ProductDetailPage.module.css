@@ -1,0 +1,145 @@
+.productDetailPage {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Breadcrumbs removed as requested */
+
+.pageTitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #1c1b1f;
+}
+
+.productContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1361px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 20px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.idLabel {
+  font-weight: 600;
+  color: #1c1b1f;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.infoLabel {
+  font-weight: 600;
+  color: #667085;
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.infoValue {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #667085;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+@media (max-width: 1200px) {
+  .productContent {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .productContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productImage {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .productInfo {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .productDetailPage {
+    padding: 16px;
+  }
+
+  .infoItem {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .infoLabel,
+  .idLabel {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  .infoValue {
+    font-size: 20px;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
