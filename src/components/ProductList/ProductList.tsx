@@ -61,15 +61,7 @@ const ProductList: React.FC = () => {
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
-  }, [
-    products,
-    allProducts,
-    nameSearchInput,
-    styles.categoryButton,
-    styles.categoryDropdown,
-    styles.nameButton,
-    styles.nameDropdownList,
-  ]);
+  }, [products, allProducts, nameSearchInput]);
 
   useEffect(() => {
     const categoryFilter = selectedCategories.length > 0 ? selectedCategories.join(',') : '';
@@ -119,7 +111,7 @@ const ProductList: React.FC = () => {
     if (value.trim()) {
       const searchTerm = value.trim().toLowerCase();
 
-      let filtered = [];
+      let filtered: any[];
 
       filtered = Array.from(
         new Set(
